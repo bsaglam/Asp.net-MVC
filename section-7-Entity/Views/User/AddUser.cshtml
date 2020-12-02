@@ -1,0 +1,54 @@
+﻿@model section_7_Entity.ViewModels.UserViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddUser</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                @using (Html.BeginForm())
+                {
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Name</label>
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @id = "exampleFormControlInput1" })
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Surname</label>
+                        @Html.TextBoxFor(m => m.Surname, new { @class = "form-control", @id = "exampleFormControlInput1" })
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea2">Example textarea</label>
+                        @Html.TextAreaFor(m => m.Address, new { @class = "form-control", @id = "exampleFormControlTextarea2", rows = "3" })
+
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                @if (ViewBag.result != null)
+                {
+                    <div class="@("alert alert-"+@ViewBag.result)" role="alert">
+                        @ViewBag.result
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

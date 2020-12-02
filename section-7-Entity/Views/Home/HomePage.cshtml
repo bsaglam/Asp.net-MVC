@@ -23,31 +23,36 @@
     </style>
 </head>
 <body>
-    <div class="row">
-        <div class="col-md-6">
-            <h1>Kullanıcılar</h1>
-            <ul class="list-group">
-                @foreach (var item in Model.Users)
-                {
-                <li class="list-group-item" id=@item.Id>
-                    <span class="glyphicon glyphicon-user red"></span>@(item.Name+""+item.Surname)
-                </li>
-                }
-            </ul>
-        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Kullanıcılar</h1>
+                @Html.ActionLink("Ekle", "AddUser", "User", null, new { @class = "btn btn-primary" })
+                <ul class="list-group">
+                    @foreach (var item in Model.Users)
+                    {
+                        <li class="list-group-item" id=@item.Id>
+                            <span class="glyphicon glyphicon-user red"></span>@(item.Name+""+item.Surname)
+                        </li>
+                    }
+                </ul>
+            </div>
 
-        <div class="col-md-6">
-            <h1>Adresler</h1>
-            <ul class="list-group">
-                @foreach (var item in Model.Addresses)
-                {
-                    <li class="list-group-item" id=@item.Id>
-                        <span class="glyphicon glyphicon-home green"></span>@(item.AddressDesc+" ("+item.User.Name+")")
-                    </li>
-                }
-            </ul>
-        </div>
+            <div class="col-md-6">
+                <h1>Adresler</h1>
+                @Html.ActionLink("Ekle", "AddAddress", "User", null, new { @class = "btn btn-primary" })
+                <ul class="list-group">
+                    @foreach (var item in Model.Addresses)
+                    {
+                        <li class="list-group-item" id=@item.Id>
+                            <span class="glyphicon glyphicon-home green"></span>@(item.AddressDesc+" ("+item.User.Name+")")
+                        </li>
+                    }
+                </ul>
+            </div>
 
+        </div>
     </div>
+ 
 </body>
 </html>

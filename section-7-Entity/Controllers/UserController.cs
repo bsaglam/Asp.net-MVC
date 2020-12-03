@@ -34,5 +34,10 @@ namespace section_7_Entity.Controllers
 
             return View();
         }
+
+        public ActionResult EditUser()
+        {
+            return View();
+        }
     }
 }

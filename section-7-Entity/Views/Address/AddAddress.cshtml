@@ -1,0 +1,50 @@
+﻿@model section_7_Entity.ViewModels.AddressViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddAddress</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+     
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    @using (Html.BeginForm())
+                    {
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Adres açıklaması</label>
+                            @Html.TextAreaFor(m=>m.AddressDesc, new { @class = "form-control", @id = "exampleFormControlInput1" })
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Kişi</label>
+                            @Html.DropDownListFor(m => m.User.Id,(List<SelectListItem>)ViewBag.UserList, new { @class = "form-control", @id = "exampleFormControlInput1" })
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+
+                    }
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    @if (ViewBag.result != null)
+                    {
+                        <div class="@("alert alert-"+@ViewBag.result)" role="alert">
+                            @ViewBag.result
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+    
+</body>
+</html>

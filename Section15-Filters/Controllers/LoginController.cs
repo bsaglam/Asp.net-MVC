@@ -25,7 +25,7 @@ namespace Section15_Filters.Controllers
                 if (user != null)
                 {
                     Session["user"] = user;
-                    return RedirectToAction("Index2", "Home");
+                    return RedirectToAction("Index", "Home");
                 }
                 else
                 {
@@ -34,8 +34,11 @@ namespace Section15_Filters.Controllers
                 }
                
             }
-
-            return View();
+            else
+            {
+                return View();
+            }
+            
         }
     }
 }

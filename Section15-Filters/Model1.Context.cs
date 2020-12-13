@@ -26,5 +26,6 @@ namespace Section15_Filters
         }
     
         public virtual DbSet<Logs> Logs { get; set; }
+        public virtual DbSet<Users> Users { get; set; }
     }
 }

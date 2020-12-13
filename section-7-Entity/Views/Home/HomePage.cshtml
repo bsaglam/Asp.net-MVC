@@ -54,8 +54,8 @@
                     @foreach (var item in Model.Addresses)
                     {
                 <li class="list-group-item" id=@item.Id>
-                    @Html.ActionLink("Düzenle", "EditAddress", "Address", new { userId = item.Id }, new { @class = "btn btn-warning " })
-                    @Html.ActionLink("Sil", "DeleteAddress", "Address", new { userId = item.Id }, new { @class = "btn btn-danger " })
+                    @Html.ActionLink("Düzenle", "EditAddress", "Address", new { addressId = item.Id }, new { @class = "btn btn-warning " })
+                    @Html.ActionLink("Sil", "DeleteAddress", "Address", new { addressId = item.Id }, new { @class = "btn btn-danger " })
                     <span class="glyphicon glyphicon-home green"></span>@(item.AddressDesc+" ("+item.User.Name+")")
 
                 </li>

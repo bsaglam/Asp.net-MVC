@@ -51,5 +51,61 @@ namespace section_7_Entity.Controllers
             ViewBag.UserList = TempData["UserList"];
             return View();
         }
+
+
+
+        public ActionResult EditAddress(int? addressId)
+        {
+            AddressViewModel model = null;
+            DatabaseContext db = new DatabaseContext();
+            List<SelectListItem> userList = (from user in db.UsersEntity.ToList()
+                                             select new SelectListItem
+                                             {
+                                                 Text = user.Name,
+                                                 Value = user.Id.ToString()
+                                             }).ToList();
+
+
+            if (addressId != null)
+            {
+                Addresses address = new Addresses();
+                address = db.AddressEntity.Where(x => x.Id == addressId).FirstOrDefault();
+                model = new AddressViewModel()
+                {
+                    AddressDesc=address.AddressDesc,
+                    User=address.User
+                };
+                
+                ViewBag.UserList = userList;
+                //Bunu post metodunda değerini kullanabilmek için kullanacağız.
+                TempData["UserList"] = ViewBag.UserList;
+            }
+
+            
+            return View(model);
+        }
+
+
+        [HttpPost]
+        public ActionResult EditAddress(AddressViewModel model,int? addressId)
+        {
+            int result = 0;
+            if (model != null)
+            {
+                DatabaseContext db = new DatabaseContext();
+                Users user = new Users();
+                user = db.UsersEntity.Where(x => x.Id == model.User.Id).FirstOrDefault();
+                Addresses address = new Addresses();
+                address = db.AddressEntity.Where(x => x.Id == addressId).FirstOrDefault();
+                address.AddressDesc = model.AddressDesc;
+                address.User = user;
+                 
+                result=db.SaveChanges();
+
+                ViewBag.UserList = TempData["UserList"];
+            }
+            ViewBag.Result = (result > 0) ? "success" : ViewBag.result = "danger";
+            return View();
+        }
     }
 }

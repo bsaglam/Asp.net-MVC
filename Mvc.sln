@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "29-ModelleDataAktarimi", "2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "section-7-Entity", "section-7-Entity\section-7-Entity.csproj", "{CE78E522-539A-4B09-8E1F-EC0131B7CEBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section15-Filters", "Section15-Filters\Section15-Filters.csproj", "{18BC332A-C7B3-42C0-92B8-B2D38E713B65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{CE78E522-539A-4B09-8E1F-EC0131B7CEBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE78E522-539A-4B09-8E1F-EC0131B7CEBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE78E522-539A-4B09-8E1F-EC0131B7CEBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18BC332A-C7B3-42C0-92B8-B2D38E713B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18BC332A-C7B3-42C0-92B8-B2D38E713B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18BC332A-C7B3-42C0-92B8-B2D38E713B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18BC332A-C7B3-42C0-92B8-B2D38E713B65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

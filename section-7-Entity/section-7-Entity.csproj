@@ -222,6 +222,7 @@
     <Content Include="Views\User\AddUser.cshtml" />
     <Content Include="Views\Address\AddAddress.cshtml" />
     <Content Include="Views\User\EditUser.cshtml" />
+    <Content Include="Views\Address\EditAddress.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />

@@ -15,7 +15,7 @@ namespace Section15_Filters.Filters
             {
                 ActionName = filterContext.ActionDescriptor.ActionName,
                 ControllerName= filterContext.ActionDescriptor.ControllerDescriptor.ControllerName,
-                UserName="system",
+                UserName=(filterContext.HttpContext.Session["user"] as Users).UserName,
                 Date=DateTime.Now,
                 Description="Action'dan çıkıyor"
             }) ;
@@ -28,7 +28,7 @@ namespace Section15_Filters.Filters
             {
                 ActionName = filterContext.ActionDescriptor.ActionName,
                 ControllerName = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName,
-                UserName = "system",
+                UserName = (filterContext.HttpContext.Session["user"] as Users).UserName,,
                 Date = DateTime.Now,
                 Description = "Action'a giriyor."
             });

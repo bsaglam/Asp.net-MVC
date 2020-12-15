@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@Ajax.ActionLink("Veri Getir","LoadData",null,
+                 new AjaxOptions { HttpMethod="GET",UpdateTargetId="list",InsertionMode=InsertionMode.Replace},
+                 new { @class="btn btn-success"})
+
+<ul id="list" class="list-group">
+
+</ul>

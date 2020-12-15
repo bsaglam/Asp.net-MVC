@@ -1,0 +1,9 @@
+﻿@model List<string>
+
+@foreach (var item in Model)
+{
+    <li id="id-@Model.IndexOf(item)" class="list-group-item">
+        @Ajax.ActionLink("Sil","DeleteData",new {id= @Model.IndexOf(item) },new AjaxOptions { HttpMethod="Get",InsertionMode=InsertionMode.ReplaceWith,UpdateTargetId="id-"+Model.IndexOf(item)})
+        @item
+    </li>
+}

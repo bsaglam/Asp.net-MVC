@@ -28,7 +28,7 @@ namespace Section15_Filters.Filters
             {
                 ActionName = filterContext.ActionDescriptor.ActionName,
                 ControllerName = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName,
-                UserName = (filterContext.HttpContext.Session["user"] as Users).UserName,,
+                UserName = (filterContext.HttpContext.Session["user"] as Users).UserName,
                 Date = DateTime.Now,
                 Description = "Action'a giriyor."
             });

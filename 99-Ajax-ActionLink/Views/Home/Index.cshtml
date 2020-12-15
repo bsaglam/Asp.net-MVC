@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@Ajax.ActionLink("veri getir", "LoadData", null, 
+    new AjaxOptions { HttpMethod = "GET",
+                      UpdateTargetId="list",
+                      InsertionMode=InsertionMode.Replace}, new { @class = "btn btn-primary" })
+
+<ul id="list">
+    
+</ul>

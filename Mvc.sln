@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "section-7-Entity", "section
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section15-Filters", "Section15-Filters\Section15-Filters.csproj", "{18BC332A-C7B3-42C0-92B8-B2D38E713B65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "99-Ajax-ActionLink", "99-Ajax-ActionLink\99-Ajax-ActionLink.csproj", "{BC27EB64-2A47-42F3-BCE9-4B17764515E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{18BC332A-C7B3-42C0-92B8-B2D38E713B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18BC332A-C7B3-42C0-92B8-B2D38E713B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18BC332A-C7B3-42C0-92B8-B2D38E713B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC27EB64-2A47-42F3-BCE9-4B17764515E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC27EB64-2A47-42F3-BCE9-4B17764515E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC27EB64-2A47-42F3-BCE9-4B17764515E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC27EB64-2A47-42F3-BCE9-4B17764515E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

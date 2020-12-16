@@ -1,0 +1,20 @@
+﻿@model _102_AjaxPostWithAjaxBeginForm.Models.ToDoItem
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Ajax.BeginForm("AddData", new AjaxOptions() { HttpMethod = "POST", UpdateTargetId = "list", InsertionMode = InsertionMode.InsertAfter }))
+{
+
+    <div class="form-group">
+        @Html.TextBoxFor(m=>m.Name,new  {@class="form-group" })
+        <button type="submit">Ekle</button>
+    </div>
+    
+    <div class="form-group">
+        <ul class="form-group" id="list">
+
+        </ul>
+    </div>
+}
+
